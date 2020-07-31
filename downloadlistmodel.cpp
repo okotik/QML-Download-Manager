@@ -113,7 +113,7 @@ void DownloadListModel::pauseDownload(int downloadIndex)
     for (int i = 0; i <=10; i++)
     {
         downloadList[downloadIndex].downloadPercent = i;
-        auto modelIndex = index(downloadIndex, 0);
+        QModelIndex modelIndex = index(downloadIndex, 0);
         emit QAbstractListModel::dataChanged(modelIndex, modelIndex, {ROW_NAME::DOWNLOAD_STATUS, ROW_NAME::DOWNLOAD_PERCENT});
     }
 }
